@@ -1,0 +1,82 @@
+%-----------------------------------------------------------------------------
+% Author: Rayla Kurosaki
+% GitHub: https://github.com/rkp1503
+%-----------------------------------------------------------------------------
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesClass{rayla-assignment}[Rayla's Assignment Class]
+\LoadClass{article}
+
+%-----------------------------------------------------------------------------
+% Defining new commands
+%-----------------------------------------------------------------------------
+\newcommand{\myUniversity}[1]{\newcommand{\myUniversityLoc}{#1}}
+\newcommand{\myTitle}[1]{\newcommand{\myTitleLoc}{#1}}
+\newcommand{\myName}[1]{\newcommand{\myNameLoc}{#1}}
+\newcommand{\courseid}[1]{\newcommand{\courseidLoc}{#1}}
+\newcommand{\courseName}[1]{\newcommand{\courseNameLoc}{#1}}
+\newcommand{\professorName}[1]{\newcommand{\professorNameLoc}{#1}}
+\newcommand{\term}[1]{\newcommand{\termLoc}{#1}}
+\newcommand{\dueDate}[1]{\newcommand{\dueDateLoc}{#1}}
+
+%-----------------------------------------------------------------------------
+% 3rd Party Packages
+%-----------------------------------------------------------------------------
+\RequirePackage{lipsum}
+
+%-----------------------------------------------------------------------------
+% Geometry
+%-----------------------------------------------------------------------------
+\RequirePackage{geometry}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+
+%-----------------------------------------------------------------------------
+% Custom Headers and Footers
+%-----------------------------------------------------------------------------
+\RequirePackage{fancyhdr}
+\fancyhead{}
+\fancyfoot{}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0.4pt} % we want rules 
+\renewcommand{\footrulewidth}{0.4pt}
+\fancyhead[RO]{\footnotesize\thepage}
+\fancyhead[LO]{\footnotesize{\ifx\classlocal\undefined{}\else\itshape\classlocal{} --{} \fi}\makeatletter\@title\makeatother }
+\fancyfoot[RO]{\footnotesize\itshape\makeatletter\@author\makeatother}
+    
+%-----------------------------------------------------------------------------
+% Custom Title Style
+%-----------------------------------------------------------------------------
+\renewcommand{\maketitle}{
+    \thispagestyle{plain}
+    \begin{center}
+        {\scshape \myUniversityLoc} \\[10pt]
+        \hrule
+        \vspace{10pt}
+        {\LARGE \bfseries \myTitleLoc} \\[5pt]
+        Student: {\itshape \myNameLoc}
+        \vspace{8pt}
+        \hrule
+        \vspace{10pt}
+        {Course: {\itshape \courseNameLoc \ (\courseidLoc)}} \hfill {Semester: {\itshape \termLoc}}\\
+        {Professor: {\itshape\professorNameLoc}} \hfill {Due date: {\itshape\dueDateLoc}}
+        \vspace{20pt}
+    \end{center}
+    \pagestyle{empty}
+}
+
+%-----------------------------------------------------------------------------
+% Custom Problem Environment
+%-----------------------------------------------------------------------------
+\usepackage{amssymb}
+% \newsavebox{\problembox}
+\newenvironment{problem}[2]
+    {\noindent\textbf{Problem #1 }{#2}\vspace{2pt}{:}\newline}
+    {\vspace{2pt}\newline}
+
+%-----------------------------------------------------------------------------
+% Custom Solution Environment
+%-----------------------------------------------------------------------------
+\RequirePackage{xcolor}
+\RequirePackage{titlesec}
+\newenvironment{solution}
+    {\noindent\textsf{\textcolor{blue}{\fbox{Solution: }}} \newline}
+    {\hfill$\blacksquare$\vspace{5pt}\vspace{5pt}}
