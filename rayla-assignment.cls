@@ -67,7 +67,6 @@
 % Custom Problem Environment
 %-----------------------------------------------------------------------------
 \usepackage{amssymb}
-% \newsavebox{\problembox}
 \newenvironment{problem}[2]
     {\noindent\textbf{Problem #1 }{#2}\vspace{2pt}{:}\newline}
     {\vspace{2pt}\newline}
