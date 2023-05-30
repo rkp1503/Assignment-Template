@@ -28,19 +28,6 @@
 %-----------------------------------------------------------------------------
 \RequirePackage{geometry}
 \geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
-
-%-----------------------------------------------------------------------------
-% Custom Headers and Footers
-%-----------------------------------------------------------------------------
-\RequirePackage{fancyhdr}
-\fancyhead{}
-\fancyfoot{}
-\pagestyle{fancy}
-\renewcommand{\headrulewidth}{0.4pt} % we want rules 
-\renewcommand{\footrulewidth}{0.4pt}
-\fancyhead[RO]{\footnotesize\thepage}
-\fancyhead[LO]{\footnotesize{\ifx\classlocal\undefined{}\else\itshape\classlocal{} --{} \fi}\makeatletter\@title\makeatother }
-\fancyfoot[RO]{\footnotesize\itshape\makeatletter\@author\makeatother}
     
 %-----------------------------------------------------------------------------
 % Custom Title Style
