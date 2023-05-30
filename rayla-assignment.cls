@@ -21,12 +21,15 @@
 %-----------------------------------------------------------------------------
 % 3rd Party Packages
 %-----------------------------------------------------------------------------
-\RequirePackage{lipsum}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{lipsum}
+\usepackage{titlesec}
+\usepackage{xcolor}
 
 %-----------------------------------------------------------------------------
 % Geometry
 %-----------------------------------------------------------------------------
-\RequirePackage{geometry}
 \geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
     
 %-----------------------------------------------------------------------------
@@ -53,7 +56,6 @@
 %-----------------------------------------------------------------------------
 % Custom Problem Environment
 %-----------------------------------------------------------------------------
-\usepackage{amssymb}
 \newenvironment{problem}[2]
     {\noindent\textbf{Problem #1 }{#2}\vspace{2pt}{:}\newline}
     {\vspace{2pt}\newline}
@@ -61,8 +63,6 @@
 %-----------------------------------------------------------------------------
 % Custom Solution Environment
 %-----------------------------------------------------------------------------
-\RequirePackage{xcolor}
-\RequirePackage{titlesec}
 \newenvironment{solution}
     {\noindent\textsf{\textcolor{blue}{\fbox{Solution: }}} \newline}
     {\hfill$\blacksquare$\vspace{5pt}\vspace{5pt}}
