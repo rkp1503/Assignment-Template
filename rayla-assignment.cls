@@ -21,16 +21,13 @@
 %-----------------------------------------------------------------------------
 % 3rd Party Packages
 %-----------------------------------------------------------------------------
-\usepackage{amssymb}
-\usepackage{geometry}
 \usepackage{lipsum}
-\usepackage{titlesec}
-\usepackage{xcolor}
 
 %-----------------------------------------------------------------------------
 % Geometry
 %-----------------------------------------------------------------------------
-\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\usepackage{geometry}
+\geometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
     
 %-----------------------------------------------------------------------------
 % Custom Title Style
@@ -63,6 +60,8 @@
 %-----------------------------------------------------------------------------
 % Custom Solution Environment
 %-----------------------------------------------------------------------------
+\usepackage{amssymb}
+\usepackage{xcolor}
 \newenvironment{solution}
     {\noindent\textsf{\textcolor{blue}{\fbox{Solution: }}} \newline}
     {\hfill$\blacksquare$\vspace{5pt}\vspace{5pt}}
