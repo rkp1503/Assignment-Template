@@ -43,7 +43,6 @@
         {Professor: {\itshape\professorNameLoc}} \hfill {Due date: {\itshape\dueDateLoc}}
         \vspace{20pt}
     \end{center}
-    \pagestyle{empty}
 }
 
 %-----------------------------------------------------------------------------
