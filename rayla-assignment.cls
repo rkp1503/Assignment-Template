@@ -50,7 +50,7 @@
 % Custom referencing
 %-----------------------------------------------------------------------------
 % Referencing equations
-% Use `~\eqref{eq:1}'
+\newcommand{\eqref}[1]{Equation~(\ref{#1})}
 % Referencing figures
 \newcommand{\figref}[1]{Figure~\ref{#1}}
 % Referencing tables
