@@ -25,6 +25,7 @@
 \usepackage{amssymb}
 \usepackage{geometry}
 \usepackage{graphicx,epstopdf}
+\usepackage{hyperref}
 \usepackage{lipsum}
 \usepackage{xcolor}
 
