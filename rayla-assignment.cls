@@ -19,11 +19,25 @@
 \newcommand{\dueDate}[1]{\newcommand{\dueDateLoc}{#1}}
 
 %-----------------------------------------------------------------------------
+% 3rd party packages
+%-----------------------------------------------------------------------------
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{graphicx,epstopdf}
+\usepackage{lipsum}
+\usepackage{xcolor}
+
+%-----------------------------------------------------------------------------
 % Geometry
 %-----------------------------------------------------------------------------
-\usepackage{geometry}
 \geometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
 \setlength\parindent{0pt}
+
+%-----------------------------------------------------------------------------
+% Setting figures directory
+%-----------------------------------------------------------------------------
+\graphicspath{{figures/}}
     
 %-----------------------------------------------------------------------------
 % Custom Title Style
@@ -49,7 +63,7 @@
 % Custom referencing
 %-----------------------------------------------------------------------------
 % Referencing equations
-\newcommand{\eqref}[1]{Equation~(\ref{#1})}
+\renewcommand{\eqref}[1]{Equation~(\ref{#1})}
 % Referencing figures
 \newcommand{\figref}[1]{Figure~\ref{#1}}
 % Referencing tables
@@ -65,20 +79,6 @@
 %-----------------------------------------------------------------------------
 % Custom Solution Environment
 %-----------------------------------------------------------------------------
-\usepackage{amssymb}
-\usepackage{xcolor}
 \newenvironment{solution}
     {\noindent\textsf{\textcolor{blue}{\fbox{Solution: }}} \newline}
     {\hfill$\blacksquare$\vspace{5pt}\vspace{5pt}}
-
-%-----------------------------------------------------------------------------
-% Enabling figures
-%-----------------------------------------------------------------------------
-\usepackage{graphicx}
-\graphicspath{{figures/}}
-\usepackage{epstopdf}
-
-%-----------------------------------------------------------------------------
-% Dummy text
-%-----------------------------------------------------------------------------
-\usepackage{lipsum}
