@@ -7,6 +7,17 @@
 \LoadClass{article}
 
 %-----------------------------------------------------------------------------
+% 3rd party packages
+%-----------------------------------------------------------------------------
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{graphicx,epstopdf}
+\usepackage{hyperref}
+\usepackage{lipsum}
+\usepackage{xcolor}
+
+%-----------------------------------------------------------------------------
 % Defining new commands
 %-----------------------------------------------------------------------------
 \newcommand{\myUniversity}[1]{\newcommand{\myUniversityLoc}{#1}}
@@ -17,17 +28,6 @@
 \newcommand{\professorName}[1]{\newcommand{\professorNameLoc}{#1}}
 \newcommand{\term}[1]{\newcommand{\termLoc}{#1}}
 \newcommand{\dueDate}[1]{\newcommand{\dueDateLoc}{#1}}
-
-%-----------------------------------------------------------------------------
-% 3rd party packages
-%-----------------------------------------------------------------------------
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{geometry}
-\usepackage{graphicx,epstopdf}
-\usepackage{hyperref}
-\usepackage{lipsum}
-\usepackage{xcolor}
 
 %-----------------------------------------------------------------------------
 % Geometry
