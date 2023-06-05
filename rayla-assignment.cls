@@ -14,6 +14,7 @@
 \usepackage{geometry}
 \usepackage{graphicx,epstopdf}
 \usepackage{hyperref}
+\usepackage{ifthen}
 \usepackage{lipsum}
 \usepackage{xcolor}
 
@@ -60,14 +61,11 @@
 %-----------------------------------------------------------------------------
 % Custom referencing
 %-----------------------------------------------------------------------------
-% Referencing an equation
-\renewcommand{\eqref}[1]{Equation~(\ref{#1})}
-% Referencing a system of equations
-\newcommand{\sysref}[1]{System~(\ref{#1})}
-% Referencing a figure
-\newcommand{\figref}[1]{Figure~\ref{#1}}
-% Referencing a table
-\newcommand{\tabref}[1]{Table~\ref{#1}}
+\newcommand{\myRef}[2]{
+    \ifthenelse{\equal{#1}{Equation}\OR\equal{#1}{System}}
+    {#1~\eqref{#2}}
+    {#1~\ref{#2}}
+}
 
 %-----------------------------------------------------------------------------
 % Custom Problem Environment
